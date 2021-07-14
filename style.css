@@ -5,18 +5,23 @@ body {
   margin: 0;
 }
 .container {
+  width: 1050px;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  background-color: #2d25a0;
+}
+.banner {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  background-color: aqua;
-  width: 500;
-  height: 300px;
+  grid-template-columns: repeat(2, 1fr);
   padding-left: 30px;
   padding-top: 30px;
 }
-.container:hover {
-  box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.6);
-  transition: 0.41s;
-  color: blueviolet;
+header:hover .footballer {
+  transform: rotate(360deg);
+  transition: transform 1s;
 }
 /*------ 
 Conmebol
@@ -42,18 +47,19 @@ Conmebol
 .footballer img {
   width: 400px;
   height: 300px;
-  padding-left: 300px;
 }
 /* Top players list */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .players {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
-.top-players {
-  margin: auto;
-  margin-top: 50px;
-}
-.top-players img {
+
+.player img {
   width: 100%;
   border-radius: 5px;
 }
@@ -69,59 +75,52 @@ Conmebol
 .player:hover {
   box-shadow: 0px 7px 15px 0 rgba(0, 0, 0, 0.7);
 }
-/* Football transition area */
-.ball {
-  width: 200px;
-  height: 200px;
-  transition: width 7s, height 7s, transform 2s;
-  padding-top: 10px;
-  padding-left: 100px;
-}
-.ball img {
-  width: 150px;
-  height: 150px;
-}
-.ball:hover {
-  width: 200px;
-  height: 200px;
-  transform: rotate(360deg);
-}
 /* featured */
-#featured {
+.feature {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  width: 500;
-  height: 300px;
+  grid-template-columns: repeat(2, 1fr);
   padding-left: 30px;
   margin-top: 20px;
 }
-#featured h1 {
+.feature h1 {
   color: black;
   padding-left: 10px;
 }
-#featured a {
+.feature a {
   padding-right: 40px;
 }
 /* football footer */
 .footer-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  border-color: floralwhite;
-  width: 100%;
-  height: 100%;
   margin-top: 10px;
+  text-align: center;
 }
-.footer img {
-  padding-right: 300px;
+.footer-container img {
   height: 150px;
-}
-.footer a {
-  padding-left: 800px;
-  flex-direction: row;
 }
 
 /*---------
  Media quearies
  ----------- */
+@media only screen and (max-width: 688px) {
+  .banner,
+  .players,
+  .feature {
+    grid-template-columns: repeat(1, 1fr);
+    grid-row-gap: 20px;
+  }
+  .container {
+    width: 100%;
+  }
+  .footer-container img {
+    width: 200px;
+    height: 150px;
+  }
+  .banner img {
+    width: 329px;
+    height: 259.17px;
+  }
+  .feature .footballer img {
+    width: 328px;
+    height: 248px;
+  }
+}
