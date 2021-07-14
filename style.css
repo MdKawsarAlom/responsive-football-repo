@@ -1,7 +1,7 @@
 /* body area here */
 body {
   font-family: "Source Sans Pro", sans-serif;
-  background-color: lightcyan;
+  background-color: #ffffff;
   margin: 0;
 }
 .container {
@@ -11,6 +11,7 @@ body {
   width: 500;
   height: 300px;
   padding-left: 30px;
+  padding-top: 30px;
 }
 .container:hover {
   box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.6);
@@ -21,11 +22,11 @@ body {
 Conmebol
 ------  */
 .conmebol-area a {
-  padding-left: 60px;
+  padding-left: 50px;
 }
 
 .conmebol-area h1 {
-  padding-left: 60px;
+  padding-left: 30px;
   color: white;
   font-size: 30px;
   font-weight: 700;
@@ -37,7 +38,6 @@ Conmebol
   border-radius: 5px;
   color: white;
   font-weight: 700;
-  margin-left: 5px;
 }
 .footballer img {
   width: 400px;
@@ -86,13 +86,27 @@ Conmebol
   height: 200px;
   transform: rotate(360deg);
 }
-
+/* featured */
+#featured {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 500;
+  height: 300px;
+  padding-left: 30px;
+  margin-top: 20px;
+}
+#featured h1 {
+  color: black;
+  padding-left: 10px;
+}
+#featured a {
+  padding-right: 40px;
+}
 /* football footer */
 .footer-container {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #f5f6fa;
   flex-direction: column;
   border-color: floralwhite;
   width: 100%;
@@ -107,3 +121,7 @@ Conmebol
   padding-left: 800px;
   flex-direction: row;
 }
+
+/*---------
+ Media quearies
+ ----------- */
